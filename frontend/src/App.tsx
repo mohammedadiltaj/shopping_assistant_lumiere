@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChatInterface } from './components/ChatInterface';
 import { ProductCard } from './components/ProductCard';
 import type { Product, Message } from './types';
 import { ShoppingBag, Sparkles, X, Trash2 } from 'lucide-react';
-import clsx from 'clsx';
 // Simple API util (inline for now or import from api.ts if exists)
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
