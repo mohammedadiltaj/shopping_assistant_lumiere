@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-prime-50: #f9fafb;
+  --color-prime-100: #f3f4f6;
+  --color-prime-900: #111827;
+  --font-sans: Inter, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-prime-50 text-prime-900 antialiased;
+  }
+}
