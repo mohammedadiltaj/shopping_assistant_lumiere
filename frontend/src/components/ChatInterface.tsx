@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import type { Message, Product } from '../types';
 import { MessageBubble } from './MessageBubble';
-import { Send, ShoppingBag } from 'lucide-react';
+// import { Send, ShoppingBag } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { sendChat } from '../api';
 
 interface ChatInterfaceProps {
