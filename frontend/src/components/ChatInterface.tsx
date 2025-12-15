@@ -41,6 +41,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, setMessa
 
             // Call API
             const response = await sendChat(input, history);
+            console.log('Chat Response:', response);
 
             // Backend returns { role, content, tool_calls }
             // If the content is empty but tool_calls exist, we might want to show something?
@@ -48,7 +49,7 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ messages, setMessa
 
             const agentMsg: Message = {
                 role: 'assistant',
-                content: response.content
+                content: response.content || "I'm looking into that..." // Fallback if content is empty (e.g. pure tool call)
             };
 
             setMessages(prev => [...prev, agentMsg]);

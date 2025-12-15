@@ -38,7 +38,7 @@ function App() {
 
   // Poll for cart updates every few seconds to keep sync if chat updates it
   useEffect(() => {
-    const interval = setInterval(fetchCart, 2000); // Polling is simple for this demo
+    const interval = setInterval(fetchCart, 30000); // Polling is simple for this demo
     return () => clearInterval(interval);
   }, []);
 
