@@ -1,6 +1,6 @@
 import type { Message } from './types';
 
-const API_URL = 'http://localhost:8000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 export const sendChat = async (message: string, history: Message[]) => {
     // Filter history to only send role and content
